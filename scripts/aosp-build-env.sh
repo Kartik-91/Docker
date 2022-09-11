@@ -16,5 +16,9 @@ yay -S --noconfirm --needed --mflags "--skippgpcheck" ncurses5-compat-libs lib32
 # Install adb and associated udev rules
 echo '[3/3] Installing adb convenience tools'
 sudo pacman -Sy --noconfirm --needed android-tools android-udev
+# Repo
+echo "Installing Git Repository Tool"
+sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
+sudo chmod a+rx /usr/local/bin/repo
 
 echo 'Setup completed, enjoy'
