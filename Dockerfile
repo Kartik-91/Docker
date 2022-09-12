@@ -32,9 +32,6 @@ RUN mkdir /home/ubuntu
 # Choosing home directory
 RUN sudo usermod -d /home/ubuntu ubuntu
 
-# Giving sudo perms to New User
-RUN sudo usermod -aG sudo ubuntu
-
 # tzdata
 ENV TZ Asia/Kolkata
 
