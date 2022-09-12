@@ -5,7 +5,7 @@ FROM ubuntu:latest
 WORKDIR /root
 
 # Maintainer
-MAINTAINER Sushrut1101 <guptasushrut@gmail.com>
+MAINTAINER Kartik-91 <kartik banwalaop@gmail.com>
 
 # Delete the profile files (we'll copy our own in the next step)
 RUN \
