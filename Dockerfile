@@ -30,6 +30,8 @@ RUN mkdir /home/kartik
 
 RUN sudo usermod -d /home/kartik kartik
 
+RUN sudo chown kartik:kartik /home/kartik
+
 # Remove the Scripts we used
 RUN rm -rf /tmp/{{install_packages,config,aosp-build-env}.sh,remove,scripts}
 
