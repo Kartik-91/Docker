@@ -7,9 +7,6 @@ USER root
 # Working Directory
 WORKDIR /root
 
-# Adding New User
-RUN sudo useradd -m ubuntu
-
 # Remove Files before copying the Rootfs
 COPY remove /tmp/
 RUN rm -rf $(< /tmp/remove)
@@ -25,6 +22,13 @@ RUN bash /tmp/install_packages.sh
 # Configuration
 COPY ./config.sh /tmp/
 RUN bash /tmp/config.sh
+
+# Adding New User
+RUN sudo useradd ubuntu
+
+RUN sudo mkdir /home/ubuntu
+
+RUN sudo usermod -d /home/ubuntu ubuntu
 
 # Remove the Scripts we used
 RUN rm -rf /tmp/{{install_packages,config,aosp-build-env}.sh,remove,scripts}
