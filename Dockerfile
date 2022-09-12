@@ -29,6 +29,9 @@ RUN useradd ubuntu
 # Making Home Directory
 RUN mkdir /home/ubuntu
 
+# Choosing home directory
+RUN sudo usermod -d /home/ubuntu ubuntu
+
 # Giving sudo perms to New User
 RUN sudo usermod -aG sudo ubuntu
 
