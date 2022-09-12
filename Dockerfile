@@ -7,6 +7,15 @@ USER root
 # Working Directory
 WORKDIR /root
 
+# Adding New User
+RUN useradd -m ubuntu
+
+# Making New Directory
+RUN mkdir /home/ubuntu
+
+# Selecting Home directory
+RUN usermod -d /home/ubuntu ubuntu
+
 # Copy rootfs files
 COPY ./rootfs /
 
