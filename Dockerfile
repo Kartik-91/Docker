@@ -24,11 +24,11 @@ COPY ./config.sh /tmp/
 RUN bash /tmp/config.sh
 
 # Adding New User
-RUN sudo useradd ubuntu
+RUN useradd kartik
 
-RUN sudo mkdir /home/ubuntu
+RUN mkdir /home/kartik
 
-RUN sudo usermod -d /home/ubuntu ubuntu
+RUN sudo usermod -d /home/kartik kartik
 
 # Remove the Scripts we used
 RUN rm -rf /tmp/{{install_packages,config,aosp-build-env}.sh,remove,scripts}
