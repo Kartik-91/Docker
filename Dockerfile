@@ -7,11 +7,14 @@ USER root
 # Working Directory
 WORKDIR /root
 
-# Adding New User
-RUN useradd -m ubuntu
+# Making New User
+RUN useradd kartik
 
-# Selecting Home directory
-RUN usermod -d /home/ubuntu ubuntu
+# Making Home Directory
+RUN mkdir /home/kartik
+
+# Choosing home directory
+RUN sudo usermod -d /home/kartik kartik
 
 # Copy rootfs files
 COPY ./rootfs /
