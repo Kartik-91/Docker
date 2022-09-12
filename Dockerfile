@@ -10,9 +10,6 @@ WORKDIR /root
 # Making New User
 RUN useradd kartik
 
-# Making Home Directory
-RUN mkdir /home/kartik
-
 # Choosing home directory
 RUN sudo usermod -d /home/kartik kartik
 
