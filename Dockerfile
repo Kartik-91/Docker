@@ -23,6 +23,15 @@ RUN apt update
 # Install sudo
 RUN apt install apt-utils sudo -y
 
+# Making New User
+RUN useradd ubuntu
+
+# Making Home Directory
+RUN mkdir /home/ubuntu
+
+# Giving sudo perms to New User
+RUN sudo usermod -aG sudo ubuntu
+
 # tzdata
 ENV TZ Asia/Kolkata
 
