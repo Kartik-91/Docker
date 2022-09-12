@@ -8,10 +8,7 @@ USER root
 WORKDIR /root
 
 # Adding New User
-RUN useradd ubuntu
-
-# Making New Directory
-RUN mkdir /home/ubuntu
+RUN useradd -m ubuntu
 
 # Selecting Home directory
 RUN usermod -d /home/ubuntu ubuntu
