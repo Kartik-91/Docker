@@ -7,6 +7,9 @@ USER root
 # Working Directory
 WORKDIR /root
 
+# Adding New User
+RUN sudo useradd -m ubuntu
+
 # Remove Files before copying the Rootfs
 COPY remove /tmp/
 RUN rm -rf $(< /tmp/remove)
