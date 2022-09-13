@@ -30,6 +30,10 @@ jobs:
         run: |
           git config --global user.name $GITHUB_USERNAME
           git config --global user.email $GITHUB_EMAIL
+          lscpu
+          free -h
+          neofetch
+          df -h
 
       - name: Logging in to Docker
         run: |
