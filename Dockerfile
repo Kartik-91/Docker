@@ -31,6 +31,7 @@ RUN mkdir /home/ubuntu
 
 # Choosing home directory
 RUN sudo usermod -d /home/ubuntu ubuntu
+RUN sudo chmod 777 /home/ubuntu
 
 # tzdata
 ENV TZ Asia/Kolkata
